@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386843045625586330}
+  - component: {fileID: 1594795854077811619}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594795854077811619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605001405436388400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49eebc7db3edcb419d6c102c921e14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveGroundAnim: {fileID: 4823272295029920555}
+  _birdMover: {fileID: 0}
 --- !u!1 &2856277897336420560
 GameObject:
   m_ObjectHideFlags: 0

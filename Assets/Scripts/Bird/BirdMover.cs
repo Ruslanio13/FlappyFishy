@@ -47,4 +47,5 @@ public class BirdMover : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
+    public float GetSpeed() => _speed;
 }
