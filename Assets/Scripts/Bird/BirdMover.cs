@@ -9,6 +9,7 @@ public class BirdMover : MonoBehaviour
     [SerializeField] private float _minRotationZ;
     [SerializeField] private float _maxRotationZ;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private Animator _animator;
 
     private Quaternion _minRotation;
     private Quaternion _maxRotation;
@@ -32,6 +33,7 @@ public class BirdMover : MonoBehaviour
 
     private void Jump()
     {
+        _animator.Play("JumpBegin");
         transform.rotation = _maxRotation;
         ResetVelocity();
         _rigidbody.AddForce(Vector2.up * _tapForce, ForceMode2D.Force);
