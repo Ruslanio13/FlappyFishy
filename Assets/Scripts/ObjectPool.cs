@@ -6,8 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private GameObject _container;
     [SerializeField] private int _capacity;
-
-    private Camera _camera;
+    [SerializeField] private Camera _camera;
 
     private List<GameObject> _pool = new List<GameObject>(); 
 
@@ -25,6 +24,14 @@ public class ObjectPool : MonoBehaviour
     {
         result = _pool.FirstOrDefault(p => p.activeSelf == false);
         return result != null;
+    }
+
+    protected void DisableObjectAbroadScreen()
+    {
+        Vector3 disablePoint = _camera.ViewportToWorldPoint(Vector2.zero);
+        foreach (var obj in _pool)
+            if (obj.activeSelf && obj.transform.position.x < disablePoint.x)
+                obj.SetActive(false);
     }
 
     private void ResetPool()

@@ -10,18 +10,25 @@ public class PipeGenerator : ObjectPool
 
     private void Start()
     {
+        Initialize(_template);
         StartCoroutine(SpawnPipe());
     }
 
     private IEnumerator SpawnPipe()
     {
-        if (TryGetObject(out GameObject pipe))
+        while (true)
         {
-            float spawnPositionY = Random.Range(_minSpawnPositionY, _maxSpawnPositionY);
-            Vector3 spawnPoint = new Vector3(transform.position.x, spawnPositionY, transform.position.z);
-            pipe.SetActive(true);
-            pipe.transform.position = spawnPoint;
+            if (TryGetObject(out GameObject pipe))
+            {
+                float spawnPositionY = Random.Range(_minSpawnPositionY, _maxSpawnPositionY);
+                Vector3 spawnPoint = new Vector3(transform.position.x, spawnPositionY, transform.position.z);
+                pipe.SetActive(true);
+                pipe.transform.position = spawnPoint;
+
+                DisableObjectAbroadScreen();
+            }
+            yield return new WaitForSeconds(_intervalBetweenSpawn);
+
         }
-        yield return new WaitForSeconds(_intervalBetweenSpawn);
     }
 }
