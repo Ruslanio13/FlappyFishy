@@ -1,16 +1,16 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Bird))]
+[RequireComponent(typeof(BirdEventHandler))]
 public class BirdCollisionHandler : MonoBehaviour
 {
-    private Bird _bird;
+    private BirdEventHandler _birdEventHandler;
     void Start()
     {
-        _bird = GetComponent<Bird>();
+        _birdEventHandler = GetComponent<BirdEventHandler>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _bird.Die();
+        _birdEventHandler.PerformDie();
     }
 }
