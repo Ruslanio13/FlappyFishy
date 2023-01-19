@@ -933,6 +933,10 @@ PrefabInstance:
       propertyPath: _tapForce
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8922579562867899882, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: _pipeGenerator
+      value: 
+      objectReference: {fileID: 531764714}
     m_RemovedComponents:
     - {fileID: 3310095913936593548, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
     - {fileID: 7510536671685546796, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}

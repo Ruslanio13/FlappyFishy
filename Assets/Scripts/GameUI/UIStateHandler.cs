@@ -7,7 +7,7 @@ public class UIStateHandler : MonoBehaviour
 
     private void Start()
     {
-        eventHandler.OnPlayerDeath += () => _restartButton.SetActive(true);
-        eventHandler.OnRestart += () => _restartButton.SetActive(false);
+        eventHandler.PlayerDeath += () => _restartButton.SetActive(true);
+        eventHandler.GameRestart += () => _restartButton.SetActive(false);
     }
 }

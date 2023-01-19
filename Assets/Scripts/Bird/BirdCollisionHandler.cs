@@ -11,6 +11,6 @@ public class BirdCollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _birdEventHandler.PerformDie();
+        _birdEventHandler.PlayerDeath?.Invoke();
     }
 }

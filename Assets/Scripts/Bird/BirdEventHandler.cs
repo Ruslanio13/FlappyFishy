@@ -1,25 +1,20 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BirdEventHandler : MonoBehaviour
 {
     [SerializeField] private PipeGenerator _pipeGenerator;
-    public delegate void DeathHandler();
-    public delegate void RestartHandler();
-    public event DeathHandler OnPlayerDeath;
-    public event RestartHandler OnRestart;
+    public UnityAction PlayerDeath;
+    public UnityAction GameRestart;
     
-    public void PerformDie() => OnPlayerDeath?.Invoke();
-
-    public void PerformRestart() => OnRestart?.Invoke();
-
     private void Start()
     {
-        OnPlayerDeath += () =>
+        PlayerDeath += () =>
         {
             Time.timeScale = 0;
         };
-        OnRestart += () =>
+        GameRestart += () =>
         {
             Time.timeScale = 1;
             _pipeGenerator.ResetPool();

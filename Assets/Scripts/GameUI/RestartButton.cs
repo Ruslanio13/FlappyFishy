@@ -24,6 +24,6 @@ public class RestartButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        eventHandler.PerformRestart();
+        eventHandler.GameRestart?.Invoke();
     }
 }

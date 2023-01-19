@@ -13,7 +13,7 @@ public class Bird : MonoBehaviour
     {
         _eventHandler = GetComponent<BirdEventHandler>();
         _mover = GetComponent<BirdMover>();
-        _eventHandler.OnRestart += ResetPlayer;
+        _eventHandler.GameRestart += ResetPlayer;
     }
 
     private void ResetPlayer()
