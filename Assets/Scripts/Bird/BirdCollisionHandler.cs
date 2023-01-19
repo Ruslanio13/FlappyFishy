@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BirdEventHandler))]
 [RequireComponent(typeof(Bird))]
-public class BirdCollisionHandler : MonoBehaviour
+public class BirdCollisionHandler : GameStateMachine
 {
     private Bird _bird;
     private BirdEventHandler _birdEventHandler;
@@ -14,10 +14,19 @@ public class BirdCollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.CompareTag("Pipe") && _birdEventHandler.state == BirdEventHandler.States.GAMEPLAY))         
-            _birdEventHandler.PlayerDeath?.Invoke();
-       // else if (collision.gameObject.CompareTag("Ground"))
-        else if (collision.gameObject.CompareTag("ScoreZone"))
-            _bird.IncreaseScore();
+        var colliderTag = collision.tag;
+        switch (colliderTag)
+        {
+            case "Pipe":
+                if (_birdEventHandler.state == BirdEventHandler.States.GAMEPLAY)
+                    _birdEventHandler.PlayerDeath?.Invoke();
+                break;
+            case "Ground":
+                //TODO: Make Interaction with Ground
+                break;
+            case "ScoreZone":
+                _bird.IncreaseScore();
+                break;
+        }
     }
 }

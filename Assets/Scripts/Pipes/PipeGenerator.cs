@@ -32,7 +32,7 @@ public class PipeGenerator : ObjectPool
         if (TryGetObject(out _lastSpawnedPipe))
         {
             float spawnPositionY = Random.Range(_minSpawnPositionY, _maxSpawnPositionY);
-            Vector3 spawnPoint = new Vector3(transform.position.x, spawnPositionY, transform.position.z);
+            Vector3 spawnPoint = new Vector3(transform.position.x, spawnPositionY, 1);
             _lastSpawnedPipe.gameObject.SetActive(true);
             _lastSpawnedPipe.transform.position = spawnPoint;
         }   

@@ -413,9 +413,10 @@ MonoBehaviour:
   _capacity: 5
   _camera: {fileID: 519420031}
   _template: {fileID: 5284724473464134652, guid: 77adfc79df0503c44b8fcba574297467, type: 3}
-  _intervalBetweenSpawn: 2
+  _intervalBetweenSpawn: 0.1
   _minSpawnPositionY: -1
   _maxSpawnPositionY: 3
+  _lastSpawnedPipe: {fileID: 0}
 --- !u!4 &649281625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2386843045625586330, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
@@ -1223,7 +1224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546004208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

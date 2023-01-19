@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BirdEventHandler : MonoBehaviour
+public class BirdEventHandler : GameStateMachine
 {
     [SerializeField] private PipeGenerator _pipeGenerator;
     [SerializeField] private Bird _bird;
@@ -25,11 +25,5 @@ public class BirdEventHandler : MonoBehaviour
             state = States.GAMEPLAY;
         };
     }
-
-    public enum States
-    {
-        GAMEPLAY,
-        GAMEOVER,
-        PAUSE
-    }
+    
 }
