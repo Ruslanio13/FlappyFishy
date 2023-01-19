@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour
 {
     [SerializeField] private GameObject _container;
     [SerializeField] private int _capacity;
-    [SerializeField] private Camera _camera;
+    [SerializeField] protected Camera _camera;
 
     private List<GameObject> _pool = new List<GameObject>(); 
 
@@ -20,23 +20,34 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    protected bool TryGetObject(out GameObject result)
+    protected bool TryGetObject(out Pipe result)
     {
-        result = _pool.FirstOrDefault(p => p.activeSelf == false);
+        _pool.FirstOrDefault(p => p.activeSelf == false).TryGetComponent(out result);
         return result != null;
     }
 
-    protected void DisableObjectAbroadScreen()
+    protected bool DisableObjectAbroadScreen()
     {
+        bool result = false;
         Vector3 disablePoint = _camera.ViewportToWorldPoint(Vector2.zero);
         foreach (var obj in _pool)
             if (obj.activeSelf && obj.transform.position.x < disablePoint.x)
+            {
                 obj.SetActive(false);
+                result = true;
+            }
+
+        return result;
     }
 
     public void ResetPool()
     {
         foreach (var obj in _pool)
             obj.SetActive(false);
+    }
+
+    protected bool AllPoolDisabled()
+    {
+        return _pool.FirstOrDefault(p => p.activeSelf == true) == null;
     }
 }
