@@ -7,6 +7,7 @@ public class BirdEventHandler : MonoBehaviour
     [SerializeField] private PipeGenerator _pipeGenerator;
     public UnityAction PlayerDeath;
     public UnityAction GameRestart;
+    public UnityAction<int> ScoreChanged;
     
     private void Start()
     {

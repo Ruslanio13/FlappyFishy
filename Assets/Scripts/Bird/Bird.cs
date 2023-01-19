@@ -8,7 +8,6 @@ public class Bird : MonoBehaviour
     private BirdMover _mover;
     private BirdEventHandler _eventHandler;
     private int _score;
-
     void Start()
     {
         _eventHandler = GetComponent<BirdEventHandler>();
@@ -20,6 +19,12 @@ public class Bird : MonoBehaviour
     {
         _mover.ResetBird();
         _score = 0;
+        _eventHandler.ScoreChanged?.Invoke(_score);
     }
-    
+
+    public void IncreaseScore()
+    {
+        _score++;
+        _eventHandler.ScoreChanged?.Invoke(_score);
+    }
 }
