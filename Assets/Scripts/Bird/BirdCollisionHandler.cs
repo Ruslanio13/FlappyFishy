@@ -1,12 +1,14 @@
 using UnityEngine;
 
 [RequireComponent(typeof(BirdEventHandler))]
+[RequireComponent(typeof(Bird))]
 public class BirdCollisionHandler : MonoBehaviour
 {
-    [SerializeField] private Bird _bird;
+    private Bird _bird;
     private BirdEventHandler _birdEventHandler;
     void Start()
     {
+        _bird = GetComponent<Bird>();
         _birdEventHandler = GetComponent<BirdEventHandler>();
     }
 
