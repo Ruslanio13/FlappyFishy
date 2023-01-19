@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BirdEventHandler : MonoBehaviour
 {
+    [SerializeField] private PipeGenerator _pipeGenerator;
     public delegate void DeathHandler();
     public delegate void RestartHandler();
     public event DeathHandler OnPlayerDeath;
@@ -21,6 +22,7 @@ public class BirdEventHandler : MonoBehaviour
         OnRestart += () =>
         {
             Time.timeScale = 1;
+            _pipeGenerator.ResetPool();
         };
     }
 }
