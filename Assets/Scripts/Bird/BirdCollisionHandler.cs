@@ -12,7 +12,7 @@ public class BirdCollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Pipe"))
+        if (collision.gameObject.CompareTag("Pipe") || collision.gameObject.CompareTag("Ground"))
             _birdEventHandler.PlayerDeath?.Invoke();
         if (collision.gameObject.CompareTag("ScoreZone"))
             _bird.IncreaseScore();

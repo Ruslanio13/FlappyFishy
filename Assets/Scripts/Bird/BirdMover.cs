@@ -34,15 +34,16 @@ public class BirdMover : MonoBehaviour
     {
         _animator.Play("JumpBegin");
         transform.rotation = _maxRotation;
-        ResetVelocity();
+        ResetVerticalVelocity();
         _rigidbody.AddForce(Vector2.up * _tapForce, ForceMode2D.Force);
     }
-    private void ResetVelocity() => _rigidbody.velocity = new Vector2(_speed, 0);
+    private void ResetVerticalVelocity() => _rigidbody.velocity = new Vector2(_speed, 0);
+    public void ResetVelocity() => _rigidbody.velocity = Vector2.zero;
 
     public void ResetBird()
     {
         transform.position = _startPosition;
-        ResetVelocity();
+        ResetVerticalVelocity();
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 

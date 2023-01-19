@@ -258,6 +258,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283892756}
   m_CullTransparentMesh: 1
+--- !u!95 &462544979 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2651677526527211729, guid: de39db25ad7d508449e0c4d7615f9f1a, type: 3}
+  m_PrefabInstance: {fileID: 995283884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1093,18 @@ PrefabInstance:
       propertyPath: _tapForce
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 8818622030711823586, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: _minRotationZ
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818622030711823586, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: _rotationSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922579562867899882, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: _bird
+      value: 
+      objectReference: {fileID: 1555069343}
     - target: {fileID: 8922579562867899882, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: _pipeGenerator
       value: 
@@ -1105,9 +1122,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
     - target: {fileID: 1594795854077811619, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1850978885}
+    - target: {fileID: 1594795854077811619, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
       propertyPath: _birdMover
       value: 
       objectReference: {fileID: 1612712360}
+    - target: {fileID: 1594795854077811619, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
+      propertyPath: _eventHandler
+      value: 
+      objectReference: {fileID: 1612712367}
+    - target: {fileID: 1594795854077811619, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
+      propertyPath: animationSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1605001405436388400, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
       propertyPath: m_Name
       value: Ground
@@ -1259,8 +1288,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20772a3c51280a41b32819b795ed883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1755551946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5172892380015960847, guid: de39db25ad7d508449e0c4d7615f9f1a, type: 3}
+  m_PrefabInstance: {fileID: 995283884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1850978885 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4823272295029920555, guid: 9cdb3e1f77ec8894c93131a7b2fd9909, type: 3}
+  m_PrefabInstance: {fileID: 1448281164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2078897337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4454155671920311922, guid: de39db25ad7d508449e0c4d7615f9f1a, type: 3}
   m_PrefabInstance: {fileID: 995283884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2078897338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755551946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5594308dce258464795c731ee18c5b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 462544979}
+  animationSpeed: 1
+  _eventHandler: {fileID: 1612712367}

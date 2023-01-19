@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class GroundAnimator : MonoBehaviour
+public class GroundAnimator : AnimationedScenery
 {
-    [SerializeField] private Animator _moveGroundAnim;
     [SerializeField] private BirdMover _birdMover;
     private void Start()
     {
-        _moveGroundAnim.speed = _birdMover.GetSpeed() * 0.175f;
-    }
-    
+        animationSpeed = _birdMover.GetSpeed() * 0.175f;
+        animator.speed = animationSpeed;
+    }   
 }

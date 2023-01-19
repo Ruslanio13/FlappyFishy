@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(BirdMover))]
 [RequireComponent(typeof(BirdEventHandler))]
@@ -26,5 +25,10 @@ public class Bird : MonoBehaviour
     {
         _score++;
         _eventHandler.ScoreChanged?.Invoke(_score);
+    }
+
+    public void Die()
+    {
+        _mover.ResetVelocity();
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ScoreZone
   - Pipe
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -1,10 +1,10 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class BirdEventHandler : MonoBehaviour
 {
     [SerializeField] private PipeGenerator _pipeGenerator;
+    [SerializeField] private Bird _bird;
     public UnityAction PlayerDeath;
     public UnityAction GameRestart;
     public UnityAction<int> ScoreChanged;
@@ -13,11 +13,10 @@ public class BirdEventHandler : MonoBehaviour
     {
         PlayerDeath += () =>
         {
-            Time.timeScale = 0;
+            _bird.Die();
         };
         GameRestart += () =>
         {
-            Time.timeScale = 1;
             _pipeGenerator.ResetPool();
         };
     }
