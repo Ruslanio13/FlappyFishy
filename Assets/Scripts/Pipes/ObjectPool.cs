@@ -50,4 +50,11 @@ public class ObjectPool : MonoBehaviour
     {
         return _pool.FirstOrDefault(p => p.activeSelf == true) == null;
     }
+
+    public void SetAllObjectsColliders(bool isActive)
+    {
+        foreach (var obj in _pool)
+            if (TryGetComponent(out BoxCollider2D box))
+                box.enabled = isActive;
+    }
 }
