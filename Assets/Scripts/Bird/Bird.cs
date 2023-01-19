@@ -5,7 +5,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(BirdEventHandler))]
 public class Bird : MonoBehaviour
 {
-    [SerializeField] private GameObject _resetButton;
     private BirdMover _mover;
     private BirdEventHandler _eventHandler;
     private int _score;
@@ -19,7 +18,6 @@ public class Bird : MonoBehaviour
 
     private void ResetPlayer()
     {
-        _resetButton.SetActive(false);
         _mover.ResetBird();
         _score = 0;
     }
