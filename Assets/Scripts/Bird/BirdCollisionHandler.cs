@@ -5,27 +5,31 @@ using UnityEngine;
 public class BirdCollisionHandler : GameStateMachine
 {
     private Bird _bird;
+    private BirdMover _birdMover;
     private BirdEventHandler _birdEventHandler;
     void Start()
     {
         _bird = GetComponent<Bird>();
         _birdEventHandler = GetComponent<BirdEventHandler>();
+        _birdMover = GetComponent<BirdMover>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var colliderTag = collision.tag;
-        switch (colliderTag)
+        switch (collision.tag)
         {
-            case "Pipe":
-                if (_birdEventHandler.state == BirdEventHandler.States.GAMEPLAY)
-                    _birdEventHandler.PlayerDeath?.Invoke();
-                break;
             case "Ground":
-                //TODO: Make Interaction with Ground
+                _birdMover.SetRigidbody(true);
+                _birdEventHandler.PlayerDeath?.Invoke();
+                break;
+            case "Pipe":
+                if (_birdEventHandler.state == States.GAMEPLAY)
+                    _birdEventHandler.PlayerDeath?.Invoke();
                 break;
             case "ScoreZone":
                 _bird.IncreaseScore();
+                break;
+            default:
                 break;
         }
     }

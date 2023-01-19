@@ -1096,11 +1096,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8818622030711823586, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: _minRotationZ
-      value: -90
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 8818622030711823586, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: _rotationSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818622030711823586, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: _defaultRotationSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8922579562867899882, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: _bird
