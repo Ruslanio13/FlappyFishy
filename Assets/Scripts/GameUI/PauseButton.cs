@@ -2,9 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class RestartButton : MonoBehaviour
+public class PauseButton : MonoBehaviour
 {
-    [SerializeField] private BirdEventHandler eventHandler;
     [SerializeField] private Pause pause;
 
     private Button _button;
@@ -25,7 +24,6 @@ public class RestartButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        pause?.OffPause?.Invoke();
-        eventHandler.GameRestart?.Invoke();
+        pause.OnPause?.Invoke();
     }
 }

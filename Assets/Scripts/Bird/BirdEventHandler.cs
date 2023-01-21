@@ -9,7 +9,7 @@ public class BirdEventHandler : GameStateMachine
     public UnityAction GameRestart;
     public UnityAction<int> ScoreChanged;
     public States state { get; private set; }
-    
+
     private void Start()
     {
         PlayerDeath += () =>
