@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minPosX: 1
   maxPosX: 3
-  minPosY: -4
-  maxPosY: 4
+  minPosY: -3
+  maxPosY: 3
 --- !u!212 &6629107343716573959
 SpriteRenderer:
   m_ObjectHideFlags: 0

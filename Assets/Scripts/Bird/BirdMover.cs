@@ -42,7 +42,7 @@ public class BirdMover : MonoBehaviour
 
     private void Jump()
     {
-        _animator.Play("JumpBegin");
+        _animator.Play("WingJumpBegin");
         transform.rotation = _maxRotation;
         ResetVerticalVelocity();
         _rigidbody.AddForce(Vector2.up * _tapForce, ForceMode2D.Force);
