@@ -41,6 +41,8 @@ public class UIStateHandler : MonoBehaviour
         {
             ShowNewBalance();
         };
+
+        ShowNewBalance();
     }
 
     private void SetGameplayElementsActive(bool isActive)
