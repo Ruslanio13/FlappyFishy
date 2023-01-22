@@ -1,12 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Button))]
-public class MenuButton : MonoBehaviour
+public class SceneButton : MonoBehaviour
 {
-    [SerializeField] private BirdEventHandler _eventHandler;
-
+    [SerializeField] private string sceneName;
     private Button _button;
+
+    private void Awake()
+    {
+        _button = GetComponent<Button>();
+    }
 
     private void OnEnable()
     {
@@ -16,14 +21,8 @@ public class MenuButton : MonoBehaviour
     {
         _button.onClick.RemoveListener(OnButtonClick);
     }
-
-    private void Awake()
-    {
-        _button = GetComponent<Button>();
-    }
-
     private void OnButtonClick()
     {
-        _eventHandler.SwitchedToMenu?.Invoke();
+        SceneManager.LoadScene(sceneName);
     }
 }

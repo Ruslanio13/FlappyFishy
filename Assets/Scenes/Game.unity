@@ -2024,7 +2024,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 184690618962568760, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: m_SortingOrder
-      value: -2
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2113963500009198033, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: m_Sprite
@@ -3000,7 +3000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa732c9da8e2a064fa9c5b2955c2fd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventHandler: {fileID: 0}
+  _eventHandler: {fileID: 1612712367}
 --- !u!114 &1987262341
 MonoBehaviour:
   m_ObjectHideFlags: 0
