@@ -5,7 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class MenuButton : MonoBehaviour
 {
-    [SerializeField] private Pause pause;
+    [SerializeField] private BirdEventHandler _eventHandler;
 
     private Button _button;
 
@@ -25,6 +25,6 @@ public class MenuButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        SceneManager.LoadScene("Menu");
+        _eventHandler.SwitchedToMenu?.Invoke();
     }
 }

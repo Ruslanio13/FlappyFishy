@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GroundAnimator : AnimationedScenery
+public class Ground : AnimatedObject
 {
     [SerializeField] private BirdMover _birdMover;
     private void Start()

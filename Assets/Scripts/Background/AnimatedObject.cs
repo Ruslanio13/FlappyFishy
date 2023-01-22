@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationedScenery : MonoBehaviour
+public class AnimatedObject : MonoBehaviour
 {
     [SerializeField] protected Animator animator;
     [SerializeField] protected float animationSpeed;
@@ -10,13 +12,16 @@ public class AnimationedScenery : MonoBehaviour
     {
         _eventHandler.PlayerDeath += StopAnimation;
         _eventHandler.GameRestart += ResumeAnimation;
+        _eventHandler.GamePaused += StopAnimation;
+        _eventHandler.GameResumed += ResumeAnimation;
     }
     private void OnDisable()
     {
         _eventHandler.PlayerDeath -= StopAnimation;
         _eventHandler.GameRestart -= ResumeAnimation;
+        _eventHandler.GamePaused -= StopAnimation;
+        _eventHandler.GameResumed -= ResumeAnimation;
     }
-
     protected void StopAnimation()
     {
         animator.speed = 0;

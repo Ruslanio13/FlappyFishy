@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class PauseButton : MonoBehaviour
 {
-    [SerializeField] private Pause pause;
+    [SerializeField] private BirdEventHandler _eventHandler;
 
     private Button _button;
 
@@ -24,6 +24,6 @@ public class PauseButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        pause.OnPause?.Invoke();
+        _eventHandler.GamePaused?.Invoke();
     }
 }

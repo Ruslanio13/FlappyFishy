@@ -10,8 +10,10 @@ public class BirdMover : MonoBehaviour
     [SerializeField] private float _maxRotationZ;
     [SerializeField] private float _defaultRotationSpeed;
     [SerializeField] private Animator _animator;
+    
     private float _rotationSpeed;
-
+    private Vector2 _savedSpeedVector;
+    
     private Quaternion _minRotation;
     private Quaternion _maxRotation;
 
@@ -31,6 +33,8 @@ public class BirdMover : MonoBehaviour
 
     private void Update()
     {
+        if (_eventHandler.state == GameStateMachine.States.PAUSE)
+            return;
         transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.Space) && _eventHandler.state == GameStateMachine.States.GAMEPLAY)
             Jump();
@@ -63,6 +67,19 @@ public class BirdMover : MonoBehaviour
             _rigidbody.bodyType = RigidbodyType2D.Dynamic;
     }
 
+    public void SaveSpeedAndStop()
+    {
+        _savedSpeedVector = _rigidbody.velocity;
+        _rigidbody.velocity = Vector2.zero;
+        SetRigidbody(true);
+    }
+
+    public void RestoreSpeed()
+    {
+        SetRigidbody(false);
+        _rigidbody.velocity = _savedSpeedVector;
+    }
+
     private void IncreaseRotationSpeedAndAngle()
     {
         _minRotation = Quaternion.Euler(0, 0, -90);
@@ -74,4 +91,5 @@ public class BirdMover : MonoBehaviour
         _minRotation = Quaternion.Euler(0, 0, _minRotationZ);
         _rotationSpeed = _defaultRotationSpeed;
     }
+    
 }

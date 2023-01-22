@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class RestartButton : MonoBehaviour
 {
     [SerializeField] private BirdEventHandler eventHandler;
-    [SerializeField] private Pause pause;
 
     private Button _button;
 
@@ -25,7 +24,7 @@ public class RestartButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        pause?.OffPause?.Invoke();
+        
         eventHandler.GameRestart?.Invoke();
     }
 }
