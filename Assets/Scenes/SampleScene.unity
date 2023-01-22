@@ -2022,6 +2022,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184690618962568760, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113963500009198033, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3beba9e796fdd4441a821facac5f9440, type: 3}
     - target: {fileID: 2237302896207260329, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: m_Name
       value: Bird
@@ -2038,6 +2046,14 @@ PrefabInstance:
       propertyPath: _bird
       value: 
       objectReference: {fileID: 1555069343}
+    - target: {fileID: 6566830991901635064, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566830991901635064, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 7219450075917340690, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: m_RootOrder
       value: 1
