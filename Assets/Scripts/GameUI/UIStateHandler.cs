@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class UIStateHandler : MonoBehaviour
@@ -6,6 +7,7 @@ public class UIStateHandler : MonoBehaviour
     [SerializeField] private GameObject _pauseWindow;
     [SerializeField] private GameObject _gameOverWindow;
     [SerializeField] private GameObject[] _gameplayElements;
+    [SerializeField] private TMP_Text balanceText;
 
     private void Start()
     {
@@ -34,6 +36,11 @@ public class UIStateHandler : MonoBehaviour
             
             SetGameplayElementsActive(true);
         };
+
+        eventHandler.PickUpMoney += () =>
+        {
+            ShowNewBalance();
+        };
     }
 
     private void SetGameplayElementsActive(bool isActive)
@@ -52,5 +59,10 @@ public class UIStateHandler : MonoBehaviour
     private void SetGameOverWindowActive(bool isActive)
     {
         _gameOverWindow.SetActive(isActive);
+    }
+
+    private void ShowNewBalance()
+    {
+        balanceText.text = PlayerPrefs.GetInt("balance").ToString();
     }
 }

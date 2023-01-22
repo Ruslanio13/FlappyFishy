@@ -7,6 +7,7 @@ TagManager:
   - ScoreZone
   - Pipe
   - Ground
+  - Money
   layers:
   - Default
   - TransparentFX

@@ -35,7 +35,7 @@ public class PipeGenerator : ObjectPool
             Vector3 spawnPoint = new Vector3(transform.position.x, spawnPositionY, 1);
             _lastSpawnedPipe.gameObject.SetActive(true);
             _lastSpawnedPipe.transform.position = spawnPoint;
-            _lastSpawnedPipe.GeneratePipeDifficulty();
+            _lastSpawnedPipe.GeneratePipe();
         }   
     }
 }
