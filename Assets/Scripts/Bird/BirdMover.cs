@@ -36,12 +36,12 @@ public class BirdMover : MonoBehaviour
         if (_eventHandler.state == GameStateMachine.States.PAUSE)
             return;
         transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
-        if ((Input.GetKeyDown(KeyCode.Space)) && _eventHandler.state == GameStateMachine.States.GAMEPLAY)
-            Jump();
     }
 
-    private void Jump()
+    public void Jump()
     {
+        if (_eventHandler.state != GameStateMachine.States.GAMEPLAY)
+            return;
         _animator.Play("WingJumpBegin");
         transform.rotation = _maxRotation;
         ResetVerticalVelocity();
