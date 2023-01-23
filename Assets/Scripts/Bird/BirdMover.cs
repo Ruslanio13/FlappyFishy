@@ -36,7 +36,7 @@ public class BirdMover : MonoBehaviour
         if (_eventHandler.state == GameStateMachine.States.PAUSE)
             return;
         transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.Space) && _eventHandler.state == GameStateMachine.States.GAMEPLAY)
+        if ((Input.GetKeyDown(KeyCode.Space)) && _eventHandler.state == GameStateMachine.States.GAMEPLAY)
             Jump();
     }
 

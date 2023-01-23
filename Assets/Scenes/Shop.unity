@@ -156,7 +156,7 @@ RectTransform:
   m_Father: {fileID: 818202026}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0.45}
+  m_AnchorMin: {x: 0.05, y: 0.2}
   m_AnchorMax: {x: 0.95, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -195,10 +195,10 @@ MonoBehaviour:
   m_ChildAlignment: 0
   _rows: 2
   _columns: 3
-  _cellSize: {x: 316.94885, y: 210.16217}
-  _spacing: {x: 10.576714, y: 155.67567}
-  _spacingKoefWidth: 91.9
-  _spacingKoefHeight: 3.7
+  _cellSize: {x: 300.53024, y: 499.45947}
+  _spacing: {x: 35.204636, y: 57.08108}
+  _spacingKoefWidth: 27.61
+  _spacingKoefHeight: 18.5
   _texts: []
 --- !u!1 &371717607
 GameObject:

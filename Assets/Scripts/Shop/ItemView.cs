@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,6 +8,7 @@ public class ItemView : MonoBehaviour
     [FormerlySerializedAs("Id")] [SerializeField] private int id;
     [SerializeField] private Button buyButton;
     [SerializeField] private Button selectButton;
+    [SerializeField] private TMP_Text selectButtonText;
     [SerializeField] private Image skin;
     [SerializeField] private TMP_Text priceText;
     private int _price;
@@ -51,5 +51,13 @@ public class ItemView : MonoBehaviour
     private void SelectSkin()
     {
         SkinManager.Instance.SelectSkin(id);
+        Shop.instance.ShowSelectedSkin();
+    }
+    public void MakeSkinSelected(bool isSelected)
+    {
+        if (isSelected)
+            selectButtonText.text = "selected";
+        else if (PlayerPrefs.GetInt("Skin" + id) == 1)
+            selectButtonText.text = "select";
     }
 }
