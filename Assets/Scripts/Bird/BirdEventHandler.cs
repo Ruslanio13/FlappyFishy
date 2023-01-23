@@ -6,13 +6,12 @@ public class BirdEventHandler : GameStateMachine
 {
     [SerializeField] private PipeGenerator _pipeGenerator;
     [SerializeField] private Bird _bird;
-    [SerializeField] private Wallet wallet;
     public UnityAction PlayerDeath;
     public UnityAction GameRestart;
     public UnityAction GamePaused;
     public UnityAction GameResumed;
     public UnityAction SwitchedToMenu;
-    public UnityAction PickUpMoney;
+    public UnityAction BalanceChanged;
     public UnityAction<int> ScoreChanged;
     public States state { get; private set; }
 
@@ -47,10 +46,6 @@ public class BirdEventHandler : GameStateMachine
             SceneManager.LoadScene("Menu");
         };
 
-        PickUpMoney += () =>
-        {
-            wallet.IncreaseBalance();
-        };
     }
     
 }

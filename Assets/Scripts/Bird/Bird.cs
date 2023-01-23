@@ -9,6 +9,7 @@ public class Bird : MonoBehaviour
     private int _score;
     void Start()
     {
+        
         _eventHandler = GetComponent<BirdEventHandler>();
         _mover = GetComponent<BirdMover>();
         _eventHandler.GameRestart += ResetPlayer;
@@ -30,6 +31,10 @@ public class Bird : MonoBehaviour
         _eventHandler.ScoreChanged?.Invoke(_score);
     }
 
+    public void PickUpMoney()
+    {
+        Wallet.Instance.IncreaseBalance();
+    }
     public void IncreaseScore()
     {
         _score++;

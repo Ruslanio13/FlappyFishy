@@ -1242,9 +1242,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 818202022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291c4d98e4b620c47af08a86134d8652, type: 3}
+  m_Script: {fileID: 11500000, guid: cbfa8c9a97fdb4f43804cbdc413af953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balanceText: {fileID: 1895644733}
 --- !u!1 &992989794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,7 +2106,7 @@ PrefabInstance:
     - target: {fileID: 8922579562867899882, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: wallet
       value: 
-      objectReference: {fileID: 818202030}
+      objectReference: {fileID: 0}
     - target: {fileID: 8922579562867899882, guid: 0ba3ca20874148444a695cf6ad377798, type: 3}
       propertyPath: _pipeGenerator
       value: 

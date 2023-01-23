@@ -8,7 +8,6 @@ public class UIStateHandler : MonoBehaviour
     [SerializeField] private GameObject _gameOverWindow;
     [SerializeField] private GameObject[] _gameplayElements;
     [SerializeField] private TMP_Text balanceText;
-
     private void Start()
     {
         eventHandler.PlayerDeath += () =>
@@ -17,19 +16,24 @@ public class UIStateHandler : MonoBehaviour
             
             SetGameOverWindowActive(true);
         };
+        
         eventHandler.GameRestart += () =>
         {
             SetGameOverWindowActive(false);
             SetPauseWindowActive(false);
             
             SetGameplayElementsActive(true);
+            
+            UpdateBalance();
         };
+        
         eventHandler.GamePaused += () =>
         {
             SetGameplayElementsActive(false);
             
             SetPauseWindowActive(true);
         };
+        
         eventHandler.GameResumed += () =>
         {
             SetPauseWindowActive(false);
@@ -37,12 +41,8 @@ public class UIStateHandler : MonoBehaviour
             SetGameplayElementsActive(true);
         };
 
-        eventHandler.PickUpMoney += () =>
-        {
-            ShowNewBalance();
-        };
+        Wallet.Instance.BalanceChanged += UpdateBalance;
 
-        ShowNewBalance();
     }
 
     private void SetGameplayElementsActive(bool isActive)
@@ -63,8 +63,8 @@ public class UIStateHandler : MonoBehaviour
         _gameOverWindow.SetActive(isActive);
     }
 
-    private void ShowNewBalance()
+    private void UpdateBalance()
     {
-        balanceText.text = PlayerPrefs.GetInt("balance").ToString();
+        balanceText.text = Wallet.Instance.Balance.ToString();
     }
 }

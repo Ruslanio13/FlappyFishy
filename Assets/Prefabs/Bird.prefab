@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 416439501236827868}
   - component: {fileID: 8818622030711823586}
   - component: {fileID: 8922579562867899882}
+  - component: {fileID: -1752311018545700576}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -185,7 +186,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pipeGenerator: {fileID: 0}
   _bird: {fileID: 416439501236827868}
-  wallet: {fileID: 0}
+--- !u!114 &-1752311018545700576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237302896207260329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4dd6acdbcea2242801047e4bd1f8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4473227852183461670
 GameObject:
   m_ObjectHideFlags: 0
