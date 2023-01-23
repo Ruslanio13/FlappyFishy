@@ -1,20 +1,15 @@
 using System;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class SkinManager : SaveSerial
 {
     private Sprite _skin;
-
-    public bool[] IsSkinBought { get; private set; }
     public Sprite SelectedSkin { get; private set; }
-    public int SelectedSkinId { get; private set; }
     
     public static SkinManager Instance;
     
     private void Awake()
     {
-        SavePath = Application.persistentDataPath + "/MySaveData.dat";
         if (Instance == null)
             Instance = this;
         else
@@ -24,30 +19,28 @@ public class SkinManager : SaveSerial
     }
     void Start()
     {
-    LoadGame();
+        LoadGame();
     }
 
-    public void Initialize(bool[] boughtSkins, int selectedSkinId)
+    public void Initialize(int selectedSkinId)
     {
-        IsSkinBought = boughtSkins;
-        SelectedSkinId = selectedSkinId;
         SelectedSkin = ListOfItemsInStore[selectedSkinId].Icon;
-        IsSkinBought[SelectedSkinId] = true;
+        PlayerPrefs.SetInt("Skin" + selectedSkinId, 1);
     }
 
     public void AddSkin(int id)
     {
-        if (IsSkinBought[id])
+        if (PlayerPrefs.GetInt("Skin" + id) == 1)
             throw new Exception("Skin was Already Bought");
-        IsSkinBought[id] = true;
+        PlayerPrefs.SetInt("Skin" + id, 1);
     }
 
     public void SelectSkin(int id)
     {
-        if (!IsSkinBought[id])
+        if (PlayerPrefs.GetInt("Skin" + id) != 1)
             throw new Exception("Trying to select not bought skin");
-        SelectedSkinId = id;
-        SelectedSkin = ListOfItemsInStore[SelectedSkinId].Icon;
+        PlayerPrefs.SetInt("SelectedSkinId", id);
+        SelectedSkin = ListOfItemsInStore[id].Icon;
     }
     public void OnDestroy()
     {

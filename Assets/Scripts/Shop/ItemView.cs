@@ -30,8 +30,8 @@ public class ItemView : MonoBehaviour
         skin.sprite = item.Icon;
         _price = item.Price;
         priceText.text = _price.ToString();         
-        buyButton.gameObject.SetActive(!SkinManager.Instance.IsSkinBought[id]);
-        selectButton.gameObject.SetActive(SkinManager.Instance.IsSkinBought[id]);
+        buyButton.gameObject.SetActive(PlayerPrefs.GetInt("Skin" + id) == 0);
+        selectButton.gameObject.SetActive(PlayerPrefs.GetInt("Skin" + id) == 1);
     }
     
     private void BuySkin()
