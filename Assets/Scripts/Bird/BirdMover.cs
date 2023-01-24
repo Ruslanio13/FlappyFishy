@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class BirdMover : MonoBehaviour
@@ -10,7 +11,8 @@ public class BirdMover : MonoBehaviour
     [SerializeField] private float _maxRotationZ;
     [SerializeField] private float _defaultRotationSpeed;
     [SerializeField] private Animator _animator;
-    
+
+    public UnityAction PlayerJumped;
     private float _rotationSpeed;
     private Vector2 _savedSpeedVector;
     
@@ -42,6 +44,7 @@ public class BirdMover : MonoBehaviour
     {
         if (_eventHandler.state != GameStateMachine.States.GAMEPLAY)
             return;
+        PlayerJumped.Invoke();
         _animator.Play("WingJumpBegin");
         transform.rotation = _maxRotation;
         ResetVerticalVelocity();

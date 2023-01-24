@@ -19,12 +19,17 @@ public class BirdCollisionHandler : GameStateMachine
         switch (collision.tag)
         {
             case "Ground":
+                if (_birdEventHandler.state == States.GAMEPLAY)
+                    _birdEventHandler.PlayerDeath?.Invoke();
+                
                 _birdMover.SetRigidbody(true);
-                _birdEventHandler.PlayerDeath?.Invoke();
+                _birdEventHandler.ObstacleHit?.Invoke();
                 break;
             case "Pipe":
                 if (_birdEventHandler.state == States.GAMEPLAY)
                     _birdEventHandler.PlayerDeath?.Invoke();
+                
+                _birdEventHandler.ObstacleHit?.Invoke();
                 break;
             case "ScoreZone":
                 _bird.IncreaseScore();
