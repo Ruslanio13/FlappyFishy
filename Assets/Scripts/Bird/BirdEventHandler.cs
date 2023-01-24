@@ -11,7 +11,7 @@ public class BirdEventHandler : GameStateMachine
     public UnityAction GamePaused;
     public UnityAction GameResumed;
     public UnityAction SwitchedToMenu;
-    public UnityAction ObstacleHit;
+    public UnityAction<bool> ObstacleHit;
     public UnityAction<int> ScoreChanged;
     public States state { get; private set; }
 

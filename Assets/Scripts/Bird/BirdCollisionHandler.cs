@@ -23,13 +23,14 @@ public class BirdCollisionHandler : GameStateMachine
                     _birdEventHandler.PlayerDeath?.Invoke();
                 
                 _birdMover.SetRigidbody(true);
-                _birdEventHandler.ObstacleHit?.Invoke();
+                _birdEventHandler.ObstacleHit?.Invoke(false);
                 break;
             case "Pipe":
                 if (_birdEventHandler.state == States.GAMEPLAY)
+                {
                     _birdEventHandler.PlayerDeath?.Invoke();
-                
-                _birdEventHandler.ObstacleHit?.Invoke();
+                    _birdEventHandler.ObstacleHit?.Invoke(true);
+                }
                 break;
             case "ScoreZone":
                 _bird.IncreaseScore();

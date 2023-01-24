@@ -17,9 +17,13 @@ public class SoundPlayer : MonoBehaviour
     private void Start()
     {
         _source = GetComponent<AudioSource>();
-        eventHandler.PlayerDeath += () => { _source.PlayOneShot(deathClip); };
-        eventHandler.ScoreChanged += (int x) => { _source.PlayOneShot(pointClip); };
-        eventHandler.ObstacleHit += () => { _source.PlayOneShot(pipeHitClip); };
         mover.PlayerJumped += () => { _source.PlayOneShot(jumpClip); };
+        eventHandler.ScoreChanged += (int x) => { _source.PlayOneShot(pointClip); };
+        eventHandler.ObstacleHit += PlayHitShot;
+    }
+
+    private void PlayHitShot(bool isPipe)
+    {
+        _source.PlayOneShot(isPipe ? pipeHitClip : deathClip);
     }
 }
