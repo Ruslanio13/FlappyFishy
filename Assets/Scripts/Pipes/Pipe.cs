@@ -7,7 +7,10 @@ public class Pipe : MonoBehaviour
     [SerializeField] private float minUpperPipeY;
     [SerializeField] private float maxUpperPipeY;
     [SerializeField] private GameObject money;
-    public bool IsOnSafeDistanceFromX(float x) =>  x - transform.position.x > safeSpawnDistance;
+    public bool IsOnSafeDistanceFromX(float x)
+    {
+        return x - transform.position.x > safeSpawnDistance;
+    }
     public void GeneratePipe()
     {
         GeneratePipeDifficulty();

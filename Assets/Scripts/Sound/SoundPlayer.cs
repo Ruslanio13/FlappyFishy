@@ -7,6 +7,7 @@ public class SoundPlayer : MonoBehaviour
     [SerializeField] private AudioClip pipeHitClip;
     [SerializeField] private AudioClip pointClip;
     [SerializeField] private AudioClip jumpClip;
+    [SerializeField] private AudioClip coinClip;
 
     [SerializeField] private BirdEventHandler eventHandler;
     [SerializeField] private BirdMover mover;
@@ -18,6 +19,7 @@ public class SoundPlayer : MonoBehaviour
         mover.PlayerJumped += () => { _source.PlayOneShot(jumpClip); };
         eventHandler.ScoreChanged += (int x) => { _source.PlayOneShot(pointClip); };
         eventHandler.ObstacleHit += PlayHitShot;
+        eventHandler.PickedUpCoin += () => { _source.PlayOneShot(coinClip); };
     }
 
     private void PlayHitShot(bool isPipe)

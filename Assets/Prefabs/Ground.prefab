@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2386843045625586330}
-  - component: {fileID: 1594795854077811619}
-  - component: {fileID: 9035027586337276262}
+  - component: {fileID: 8114067426443749698}
+  - component: {fileID: 7691729933782087098}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594795854077811619
+--- !u!114 &8114067426443749698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,9 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49eebc7db3edcb419d6c102c921e14d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveGroundAnim: {fileID: 4823272295029920555}
+  animator: {fileID: 4823272295029920555}
+  animationSpeed: 1
+  _eventHandler: {fileID: 0}
   _birdMover: {fileID: 0}
---- !u!61 &9035027586337276262
+--- !u!61 &7691729933782087098
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,7 +63,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.8791924, y: -0.03342694}
+  m_Offset: {x: 2.8811235, y: -1.1178267}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -72,7 +74,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.504999, y: 2.16994}
+  m_Size: {x: 12.168741, y: 2.2398357}
   m_EdgeRadius: 0
 --- !u!1 &3076314906036175566
 GameObject:

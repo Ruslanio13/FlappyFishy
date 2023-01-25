@@ -33,6 +33,7 @@ public class Bird : MonoBehaviour
 
     public void PickUpMoney()
     {
+        _eventHandler.PickedUpCoin?.Invoke();
         Wallet.Instance.IncreaseBalance();
     }
     public void IncreaseScore()

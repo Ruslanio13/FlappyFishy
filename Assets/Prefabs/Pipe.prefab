@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af20902f353253468dc5179b473708c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeSpawnDistance: 0.1
+  safeSpawnDistance: -9.9
   upperPipe: {fileID: 7721086357163760233}
   minUpperPipeY: 5.5
   maxUpperPipeY: 7
@@ -209,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.26, y: 0.023779392}
+  m_Offset: {x: -1.26, y: 18.023712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 1, y: 0.5}
@@ -220,7 +220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.52, y: 9.202441}
+  m_Size: {x: 2.52, y: 45.20231}
   m_EdgeRadius: 0
 --- !u!1 &8676790723539145198
 GameObject:
@@ -320,7 +320,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.26, y: -0.019023418}
+  m_Offset: {x: -1.26, y: -18.729511}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 1, y: 0.5}
@@ -331,7 +331,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.52, y: 9.211953}
+  m_Size: {x: 2.52, y: 46.632935}
   m_EdgeRadius: 0
 --- !u!1001 &7449948127488333817
 PrefabInstance:
