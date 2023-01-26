@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a8c6b97a6f11c499ce1414145dc2db, type: 3}
-  m_Name: Biker
+  m_Script: {fileID: 11500000, guid: 9e85f6dccdb9c9cdaa30b0c7349aae5a, type: 3}
+  m_Name: YandexSettings
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 4
-  <Icon>k__BackingField: {fileID: 21300000, guid: 4b834c86d7fdddb439d24cdb053cc4a4, type: 3}
-  <Price>k__BackingField: 250
+  buildPath: C:/Users/User/Desktop/FlappyProd
+  projectName: FlappyBird

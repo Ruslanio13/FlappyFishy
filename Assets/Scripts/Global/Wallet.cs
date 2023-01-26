@@ -26,9 +26,10 @@ public class Wallet : MonoBehaviour
         Balance = PlayerPrefs.GetInt("balance");
     }
 
-    public void IncreaseBalance()
+    public void IncreaseBalance(int amount)
     {
-        PlayerPrefs.SetInt("balance", ++Balance);
+        Balance += amount;
+        PlayerPrefs.SetInt("balance", Balance);
         BalanceChanged.Invoke();
     }
 

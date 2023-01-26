@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a8c6b97a6f11c499ce1414145dc2db, type: 3}
   m_Name: Old
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 4
+  <Id>k__BackingField: 1
   <Icon>k__BackingField: {fileID: 21300000, guid: 123deb3cf195b3c4b8f3fe6e7af08821, type: 3}
-  <Price>k__BackingField: 40
+  <Price>k__BackingField: 50

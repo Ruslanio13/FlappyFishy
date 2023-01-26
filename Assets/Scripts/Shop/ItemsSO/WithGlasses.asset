@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a8c6b97a6f11c499ce1414145dc2db, type: 3}
   m_Name: WithGlasses
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 3
+  <Id>k__BackingField: 5
   <Icon>k__BackingField: {fileID: 21300000, guid: 9eeb2fd0085a01b4392be44b446d7427, type: 3}
-  <Price>k__BackingField: 30
+  <Price>k__BackingField: 500
