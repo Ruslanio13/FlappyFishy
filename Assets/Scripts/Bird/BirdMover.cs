@@ -10,7 +10,6 @@ public class BirdMover : MonoBehaviour
     [SerializeField] private float _minRotationZ;
     [SerializeField] private float _maxRotationZ;
     [SerializeField] private float _defaultRotationSpeed;
-    [SerializeField] private Animator _animator;
 
     public UnityAction PlayerJumped;
     private float _rotationSpeed;
@@ -45,7 +44,6 @@ public class BirdMover : MonoBehaviour
         if (_eventHandler.state != GameStateMachine.States.GAMEPLAY)
             return;
         PlayerJumped.Invoke();
-        _animator.Play("WingJumpBegin");
         transform.rotation = _maxRotation;
         ResetVerticalVelocity();
         _rigidbody.AddForce(Vector2.up * _tapForce, ForceMode2D.Force);

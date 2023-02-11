@@ -8,6 +8,7 @@ public class AnimatedObject : MonoBehaviour
 
     private void OnEnable()
     {
+        animator.speed = animationSpeed;
         _eventHandler.PlayerDeath += StopAnimation;
         _eventHandler.GameRestart += ResumeAnimation;
         _eventHandler.GamePaused += StopAnimation;

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Police
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 3
-  <Icon>k__BackingField: {fileID: 21300000, guid: 6c7f0bfd2cf581c489b4b4d443ac90c2, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: cbe0c42616200b043a95b1f6a402afff, type: 3}
   <Price>k__BackingField: 150

@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4454155671920311922}
+  - component: {fileID: 6638127195173426593}
   m_Layer: 0
   m_Name: Sky
   m_TagString: Untagged
@@ -116,6 +117,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6638127195173426593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172892380015960847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba660fa0263e2b44a83c65f051f0fa34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2651677526527211729}
+  animationSpeed: 0.1
+  _eventHandler: {fileID: 0}
 --- !u!1 &7553050597666592396
 GameObject:
   m_ObjectHideFlags: 0
