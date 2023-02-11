@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68a8c6b97a6f11c499ce1414145dc2db, type: 3}
-  m_Name: Default
+  m_Name: Hat1
   m_EditorClassIdentifier: 
-  <Id>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: 21300000, guid: 839e844dce8efe4458231b170a3496af, type: 3}
-  <ActualSprite>k__BackingField: {fileID: -1471282089, guid: cbe0c42616200b043a95b1f6a402afff, type: 3}
+  <Id>k__BackingField: 2
+  <Icon>k__BackingField: {fileID: 21300000, guid: cf2f1b8c7fea7634b8e4df014ad5a6bf, type: 3}
   <Price>k__BackingField: 0
-  <xPosition>k__BackingField: 0
-  <yPosition>k__BackingField: 0
-  <xScale>k__BackingField: 0
-  <yScale>k__BackingField: 0
-  <Type>k__BackingField: 0
+  <xPosition>k__BackingField: 0.026
+  <yPosition>k__BackingField: 0.469
+  <xScale>k__BackingField: 1.55
+  <yScale>k__BackingField: 1.55
+  <Type>k__BackingField: 1

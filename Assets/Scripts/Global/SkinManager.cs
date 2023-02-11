@@ -4,7 +4,11 @@ using UnityEngine;
 public class SkinManager : SaveSerial
 {
     private Sprite _skin;
-    public Sprite SelectedSkin { get; private set; }
+    public Item SelectedSkin { get; private set; }
+    public Item SelectedHat { get; private set; }
+    public Item SelectedMoustache { get; private set; }
+	public Item SelectedGlasses { get; private set; }
+    public Item SelectedColor { get; private set; }
     
     public static SkinManager Instance;
     
@@ -22,25 +26,43 @@ public class SkinManager : SaveSerial
         LoadGame();
     }
 
-    public void Initialize(int selectedSkinId)
+    public void Initialize()
     {
-        SelectedSkin = ListOfItemsInStore[selectedSkinId].Icon;
-        PlayerPrefs.SetInt("Skin" + selectedSkinId, 1);
+        SelectedSkin = ListOfSkinsInStore[PlayerPrefs.GetInt("SelectedSKIN")];
+		SelectedHat = ListOfHatsInStore[PlayerPrefs.GetInt("SelectedHAT")];
+		SelectedMoustache = ListOfMoustacheInStore[PlayerPrefs.GetInt("SelectedMOUSTACHE")];
+		SelectedGlasses = ListOfGlassesInStore[PlayerPrefs.GetInt("SelectedGLASSES")];
+        SelectedColor = ListOfColorsInStore[PlayerPrefs.GetInt("SelectedCOLOR")];
+        PlayerPrefs.SetInt("SKIN" + PlayerPrefs.GetInt("SelectedSKIN"), 1);
     }
 
-    public void AddSkin(int id)
+    public void AddItem(int id, Item item)
     {
-        if (PlayerPrefs.GetInt("Skin" + id) == 1)
-            throw new Exception("Skin was Already Bought");
-        PlayerPrefs.SetInt("Skin" + id, 1);
+        if (PlayerPrefs.GetInt(item.Type.ToString() + id) == 1)
+            throw new Exception(item.Type + " was already bought!");
+        PlayerPrefs.SetInt(item.Type.ToString() + id, 1);
     }
 
-    public void SelectSkin(int id)
+    public void SelectItem(int id, Item item)
     {
-        if (PlayerPrefs.GetInt("Skin" + id) != 1)
-            throw new Exception("Trying to select not bought skin");
-        PlayerPrefs.SetInt("SelectedSkinId", id);
-        SelectedSkin = ListOfItemsInStore[id].Icon;
+        if (PlayerPrefs.GetInt(item.Type.ToString() + id) != 1)
+            throw new Exception("Trying to select not bought item!");
+        PlayerPrefs.SetInt("Selected" + item.Type, id);
+        switch (item.Type)
+        {
+            case Item.TYPE.HAT:
+                SelectedHat = item; 
+                break;
+            case Item.TYPE.SKIN:
+                SelectedSkin = item; 
+                break;
+            case Item.TYPE.GLASSES:
+                SelectedGlasses = item; 
+                break;
+            case Item.TYPE.MOUSTACHE:
+                SelectedMoustache = item; 
+                break;
+        }
     }
     public void OnDestroy()
     {

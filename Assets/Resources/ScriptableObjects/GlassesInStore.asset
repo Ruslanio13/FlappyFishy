@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5de6bbba06ac41e4bafef042cb34c66d, type: 3}
+  m_Name: GlassesInStore
+  m_EditorClassIdentifier: 
+  <ItemsList>k__BackingField:
+  - {fileID: 11400000, guid: bd55e7bd241d6c94bb16c0c80166c730, type: 2}
+  - {fileID: 11400000, guid: e6fe6bb955c1c49498dbbd475b30f65b, type: 2}

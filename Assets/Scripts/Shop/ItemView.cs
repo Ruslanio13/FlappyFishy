@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -12,10 +13,12 @@ public class ItemView : MonoBehaviour
     [SerializeField] private Image skin;
     [SerializeField] private TMP_Text priceText;
     private int _price;
+    public Item Item { get; private set; }
+
     public void OnEnable()
     { 
-        buyButton.onClick.AddListener(BuySkin);
-        selectButton.onClick.AddListener(SelectSkin);
+        buyButton.onClick.AddListener(BuyItem);
+        selectButton.onClick.AddListener(SelectItem);
     }
 
     public void OnDisable()
@@ -26,15 +29,17 @@ public class ItemView : MonoBehaviour
 
     public void Initialize(Item item)
     {
+        Item = item;
         id = item.Id;
         skin.sprite = item.Icon;
         _price = item.Price;
         priceText.text = _price.ToString();         
-        buyButton.gameObject.SetActive(PlayerPrefs.GetInt("Skin" + id) == 0);
-        selectButton.gameObject.SetActive(PlayerPrefs.GetInt("Skin" + id) == 1);
+        buyButton.gameObject.SetActive(PlayerPrefs.GetInt(item.Type.ToString() + id) == 0);
+        Debug.Log(item.Type.ToString() + id);
+        selectButton.gameObject.SetActive(PlayerPrefs.GetInt(item.Type.ToString() + id) == 1);
     }
     
-    private void BuySkin()
+    private void BuyItem()
     {
         if (Wallet.Instance.Balance >= _price)
         {
@@ -43,21 +48,21 @@ public class ItemView : MonoBehaviour
 
             Wallet.Instance.DecreaseBalance(_price);
             
-            SkinManager.Instance.AddSkin(id);
-            SkinManager.Instance.SelectSkin(id);
+            SkinManager.Instance.AddItem(id, Item);
+            SkinManager.Instance.SelectItem(id, Item);
         }
     }
 
-    private void SelectSkin()
+    private void SelectItem()
     {
-        SkinManager.Instance.SelectSkin(id);
-        Shop.instance.ShowSelectedSkin();
+        SkinManager.Instance.SelectItem(id, Item);
+        Shop.instance.ShowSelectedItems();
     }
-    public void MakeSkinSelected(bool isSelected)
+    public void UpdateSelection()
     {
-        if (isSelected)
+        if (PlayerPrefs.GetInt("Selected" + Item.Type) == id)
             selectButtonText.text = "selected";
-        else if (PlayerPrefs.GetInt("Skin" + id) == 1)
+        else
             selectButtonText.text = "select";
     }
 }
