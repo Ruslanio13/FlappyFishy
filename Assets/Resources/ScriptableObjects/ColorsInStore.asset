@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de6bbba06ac41e4bafef042cb34c66d, type: 3}
   m_Name: ColorsInStore
   m_EditorClassIdentifier: 
+  <NextListName>k__BackingField: Hats
+  <PreviousListName>k__BackingField: Glasses
   <ItemsList>k__BackingField:
-  - {fileID: 11400000, guid: 45acbe349742efb428ec955f66674989, type: 2}
+  - {fileID: 11400000, guid: 2d12d58868c5a2c48b510020dabe18a3, type: 2}
+  - {fileID: 11400000, guid: b021212fc96e06c4287496cf722e78d5, type: 2}
+  - {fileID: 11400000, guid: 8ccf862ba2494f14d9acae9fe7f8da87, type: 2}
+  - {fileID: 11400000, guid: ffad9ab2025eb6441b6b0fff6b80b11b, type: 2}

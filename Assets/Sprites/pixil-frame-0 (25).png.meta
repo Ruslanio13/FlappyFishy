@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cbe0c42616200b043a95b1f6a402afff
+guid: ce122fa233a886242a62f1cc0a5e1064
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: defaultFish_0
+      name: pixil-frame-0 (25)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,20 +137,20 @@ TextureImporter:
         width: 105
         height: 65
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3963133feb87643a3fad9537186bf4
-      internalID: -1471282089
+      spriteID: e769314570259fa4aac3f15c3b51556a
+      internalID: -299629528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: defaultFish_1
+      name: pixil-frame-0 (25)_1
       rect:
         serializedVersion: 2
         x: 0
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c20466da677e39e4ab22d0c7744446fd
-      internalID: -459399841
+      spriteID: 45e5cbce58490c34a8022ab2e85f843e
+      internalID: -862500331
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      defaultFish_0: -1471282089
-      defaultFish_1: -459399841
+      pixil-frame-0 (25)_0: -299629528
+      pixil-frame-0 (25)_1: -862500331
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

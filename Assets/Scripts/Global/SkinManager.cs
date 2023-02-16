@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SkinManager : SaveSerial
 {
@@ -9,6 +10,8 @@ public class SkinManager : SaveSerial
     public Item SelectedMoustache { get; private set; }
 	public Item SelectedGlasses { get; private set; }
     public Item SelectedColor { get; private set; }
+
+    public UnityAction onSkinChanged;
     
     public static SkinManager Instance;
     
@@ -62,7 +65,11 @@ public class SkinManager : SaveSerial
             case Item.TYPE.MOUSTACHE:
                 SelectedMoustache = item; 
                 break;
+            case Item.TYPE.COLOR:
+                SelectedColor = item; 
+                break;
         }
+        onSkinChanged?.Invoke();
     }
     public void OnDestroy()
     {

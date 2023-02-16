@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de6bbba06ac41e4bafef042cb34c66d, type: 3}
   m_Name: HatsInStore
   m_EditorClassIdentifier: 
+  <NextListName>k__BackingField: Moustache
+  <PreviousListName>k__BackingField: Colors
   <ItemsList>k__BackingField:
   - {fileID: 11400000, guid: e2d6f525d756ba64689e9f577137ac60, type: 2}
   - {fileID: 11400000, guid: 561d4233f71843a4ba9baee9f62b5ee7, type: 2}

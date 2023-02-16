@@ -33,6 +33,7 @@ public class Shop : MonoBehaviour
             _selectedScreen = 0;
         itemList = itemScreens[_selectedScreen];
         InitializeShop();
+        Debug.Log(itemList.NextListName);
     }
 
     public void GoToPreviousScreen()
@@ -44,8 +45,9 @@ public class Shop : MonoBehaviour
             _selectedScreen = itemScreens.Count - 1;
         itemList = itemScreens[_selectedScreen];
         InitializeShop();
+        Debug.Log(itemList.PreviousListName);
     }
-    
+
     private void InitializeShop()
     {
         var items = itemList.ItemsList;
@@ -53,9 +55,7 @@ public class Shop : MonoBehaviour
         foreach (var item in spawnedItems)
             Destroy(item.gameObject);
         spawnedItems.Clear();
-        if (items[0].Type == Item.TYPE.COLOR)
-            items = items.GetRange(PlayerPrefs.GetInt("SelectedSKIN"), 6);
-        
+                
         for(int i = 0; i < items.Count; i++)
         {
             var spawnedItem = Instantiate(itemView, transform);
