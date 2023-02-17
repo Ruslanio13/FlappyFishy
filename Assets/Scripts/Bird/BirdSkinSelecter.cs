@@ -48,8 +48,8 @@ public class BirdSkinSelecter : MonoBehaviour
     private void FillSkin()
     {
         hatSprite.sprite = _selectedHat.ActualSprite;
-        moustacheSprite.sprite = _selectedMoustache.Icon;
-        glassesSprite.sprite = _selectedGlasses.Icon;
+        moustacheSprite.sprite = _selectedMoustache.ActualSprite;
+        glassesSprite.sprite = _selectedGlasses.ActualSprite;
         colorSprite.sprite = _selectedColor.Icon;
     }
 

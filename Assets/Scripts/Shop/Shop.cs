@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Shop : MonoBehaviour
     [SerializeField] private List<ItemsInStore> itemScreens;
     [SerializeField] private ItemsInStore itemList;
     [SerializeField] private ItemView itemView;
+    [SerializeField] private Sprite[] buttonIcons;
+    [SerializeField] private Image NextListButton;
+    [SerializeField] private Image PrevListButton;
     private List<ItemView> spawnedItems = new List<ItemView>();
     private int _selectedScreen;
 
@@ -33,7 +37,6 @@ public class Shop : MonoBehaviour
             _selectedScreen = 0;
         itemList = itemScreens[_selectedScreen];
         InitializeShop();
-        Debug.Log(itemList.NextListName);
     }
 
     public void GoToPreviousScreen()
@@ -45,7 +48,6 @@ public class Shop : MonoBehaviour
             _selectedScreen = itemScreens.Count - 1;
         itemList = itemScreens[_selectedScreen];
         InitializeShop();
-        Debug.Log(itemList.PreviousListName);
     }
 
     private void InitializeShop()
@@ -63,11 +65,18 @@ public class Shop : MonoBehaviour
             spawnedItem.GetComponent<ItemView>().Initialize(items[i]);
         }
         ShowSelectedItems();
+        UpdateButtonsIcon(_selectedScreen);
     }
     
     public void ShowSelectedItems()
     {
         foreach (var item in spawnedItems)
             item.UpdateSelection();
+    }
+
+    private void UpdateButtonsIcon(int currentListIndex)
+    {
+        NextListButton.sprite = buttonIcons[currentListIndex == buttonIcons.Length - 1 ? 0 : currentListIndex + 1];
+        PrevListButton.sprite = buttonIcons[currentListIndex == 0 ? buttonIcons.Length - 1 : currentListIndex - 1];
     }
 }
