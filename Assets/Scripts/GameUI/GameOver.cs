@@ -9,8 +9,7 @@ public class GameOver : MonoBehaviour
 
     private void OnEnable()
     {
-        score.text = "score:\n" + scoreClass.scoreInt.ToString();
-        bestScore.text = "best:\n" + PlayerPrefs.GetInt("best").ToString();
-    }
-    
+        score.text = scoreClass.scoreInt.ToString();
+        bestScore.text = PlayerPrefs.GetInt("best").ToString();
+    }    
 }

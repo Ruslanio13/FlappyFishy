@@ -15,7 +15,7 @@ MonoBehaviour:
   <Id>k__BackingField: 3
   <Icon>k__BackingField: {fileID: 21300000, guid: ed77ff8823776b042a902d9cf64d437d, type: 3}
   <ActualSprite>k__BackingField: {fileID: 21300000, guid: ed77ff8823776b042a902d9cf64d437d, type: 3}
-  <Price>k__BackingField: 1
+  <Price>k__BackingField: 1000
   <xPosition>k__BackingField: 0
   <yPosition>k__BackingField: 0
   <xScale>k__BackingField: 0

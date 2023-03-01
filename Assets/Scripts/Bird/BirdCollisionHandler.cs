@@ -34,6 +34,7 @@ public class BirdCollisionHandler : GameStateMachine
                 break;
             case "ScoreZone":
                 _bird.IncreaseScore();
+                collision.gameObject.SetActive(false);
                 break;
             case "Money":
                 _bird.PickUpMoney();

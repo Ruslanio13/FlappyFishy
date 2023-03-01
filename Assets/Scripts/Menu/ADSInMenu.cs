@@ -1,27 +1,22 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class ADSInMenu : MonoBehaviour
 {
-    [SerializeField] private int rewardForAds;
-    [SerializeField] private TMP_Text balance;
     [SerializeField] private Button adsButton;
+    [SerializeField] private int rewardForAds;
+    [SerializeField] private int adID;
 
-    public void WatchAdsForReward(string rewardName)
+    private void Start()
     {
-        YandexSDK.YaSDK.instance.ShowRewarded(rewardName);
-        if (rewardName == "coin")
-            Wallet.Instance.IncreaseBalance(rewardForAds);
-        balance.text = PlayerPrefs.GetInt("balance").ToString();
-        StartCoroutine(Timer());
+        adsButton.onClick.AddListener(() => YandexGame.Instance._RewardedShow(rewardForAds));
+        adsButton.onClick.AddListener(() => Rewarded(adID));
     }
 
-    private IEnumerator Timer()
+    public void Rewarded(int id)
     {
-        adsButton.interactable = false;
-        yield return new WaitForSeconds(1);
-        adsButton.interactable = true;
+        if (id == adID)
+            Wallet.Instance.IncreaseBalance(rewardForAds);
     }
 }

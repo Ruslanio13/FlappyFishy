@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4425651366743856450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,9 +108,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   safeSpawnDistance: -9.9
   upperPipe: {fileID: 7721086357163760233}
-  minUpperPipeY: 8.5
-  maxUpperPipeY: 10
+  minUpperPipeY: 9
+  maxUpperPipeY: 10.5
   money: {fileID: 7301107338797553523}
+  scoreZone: {fileID: 4425651366743856450}
 --- !u!1 &7721086357163760233
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7721086357163760233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.5, z: 0}
+  m_LocalPosition: {x: 0, y: 9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

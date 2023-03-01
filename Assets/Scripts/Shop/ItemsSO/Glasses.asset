@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 1
   <Icon>k__BackingField: {fileID: 21300000, guid: 2c95048d06c9a69438baea83fe1b0038, type: 3}
-  <Price>k__BackingField: 0
+  <ActualSprite>k__BackingField: {fileID: 21300000, guid: 2c95048d06c9a69438baea83fe1b0038, type: 3}
+  <Price>k__BackingField: 500
+  <xPosition>k__BackingField: 0
+  <yPosition>k__BackingField: 0
+  <xScale>k__BackingField: 0
+  <yScale>k__BackingField: 0
   <Type>k__BackingField: 2

@@ -16,6 +16,6 @@ MonoBehaviour:
   <PreviousListName>k__BackingField: Colors
   <ItemsList>k__BackingField:
   - {fileID: 11400000, guid: e2d6f525d756ba64689e9f577137ac60, type: 2}
-  - {fileID: 11400000, guid: 561d4233f71843a4ba9baee9f62b5ee7, type: 2}
   - {fileID: 11400000, guid: 97dbef5f21fd8684f83ee8411bafa6a1, type: 2}
   - {fileID: 11400000, guid: 2eccfbc196d28db4983c47eeeffb3a04, type: 2}
+  - {fileID: 11400000, guid: 561d4233f71843a4ba9baee9f62b5ee7, type: 2}

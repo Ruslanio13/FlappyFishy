@@ -13,6 +13,11 @@ MonoBehaviour:
   m_Name: GlassesStub
   m_EditorClassIdentifier: 
   <Id>k__BackingField: 0
-  <Icon>k__BackingField: {fileID: 21300000, guid: 54e4048faac6ebb40b4ce1a427cc4d7b, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 218307cad863ae8449857792aacbd764, type: 3}
+  <ActualSprite>k__BackingField: {fileID: 0}
   <Price>k__BackingField: 0
+  <xPosition>k__BackingField: 0
+  <yPosition>k__BackingField: 0
+  <xScale>k__BackingField: 0
+  <yScale>k__BackingField: 0
   <Type>k__BackingField: 2

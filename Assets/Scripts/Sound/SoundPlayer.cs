@@ -17,7 +17,7 @@ public class SoundPlayer : MonoBehaviour
     {
         _source = GetComponent<AudioSource>();
         mover.PlayerJumped += () => { _source.PlayOneShot(jumpClip); };
-        eventHandler.ScoreChanged += (int x) => { _source.PlayOneShot(pointClip); };
+        eventHandler.ScoreChanged += (int x) => { if (x != 0) { _source.PlayOneShot(pointClip); } };
         eventHandler.ObstacleHit += PlayHitShot;
         eventHandler.PickedUpCoin += () => { _source.PlayOneShot(coinClip); };
     }

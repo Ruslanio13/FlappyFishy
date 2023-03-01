@@ -7,6 +7,7 @@ public class Pipe : MonoBehaviour
     [SerializeField] private float minUpperPipeY;
     [SerializeField] private float maxUpperPipeY;
     [SerializeField] private GameObject money;
+    [SerializeField] private GameObject scoreZone;
     public bool IsOnSafeDistanceFromX(float x)
     {
         return x - transform.position.x > safeSpawnDistance;
@@ -27,6 +28,7 @@ public class Pipe : MonoBehaviour
     private void GenerateMoney()
     {
         money.SetActive(true);
+        scoreZone.SetActive(true);
         if (money.TryGetComponent(out Money m))
             m.GenerateMoneyPosition();
     }

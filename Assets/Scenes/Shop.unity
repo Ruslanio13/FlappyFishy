@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 371717610}
   - component: {fileID: 371717609}
   - component: {fileID: 371717612}
+  - component: {fileID: 371717613}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -624,8 +625,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ec2dff64bd6ec8d438eba2e003c798c5, type: 2}
-  m_sharedMaterial: {fileID: -7816795991948502904, guid: ec2dff64bd6ec8d438eba2e003c798c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef87eef3ee893094cb2d120ec8c9c98f, type: 2}
+  m_sharedMaterial: {fileID: -2419426279361835630, guid: ef87eef3ee893094cb2d120ec8c9c98f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -655,7 +656,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 500
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -712,6 +713,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Menu
+--- !u!114 &371717613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371717607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5483d3f3099bb46af519e62247b656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ru: "\u043C\u0435\u043D\u044E"
+  en: menu
+  tr: menu
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +990,7 @@ GameObject:
   - component: {fileID: 857665101}
   - component: {fileID: 857665104}
   - component: {fileID: 857665103}
+  - component: {fileID: 857665105}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -1023,8 +1040,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Shop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ec2dff64bd6ec8d438eba2e003c798c5, type: 2}
-  m_sharedMaterial: {fileID: -7816795991948502904, guid: ec2dff64bd6ec8d438eba2e003c798c5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ef87eef3ee893094cb2d120ec8c9c98f, type: 2}
+  m_sharedMaterial: {fileID: -2419426279361835630, guid: ef87eef3ee893094cb2d120ec8c9c98f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1054,7 +1071,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
   m_fontSizeMax: 500
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1098,6 +1115,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857665100}
   m_CullTransparentMesh: 1
+--- !u!114 &857665105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857665100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5483d3f3099bb46af519e62247b656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ru: "\u043C\u0430\u0433\u0430\u0437\u0438\u043D"
+  en: shop
+  tr: magaza
 --- !u!1 &1169126768
 GameObject:
   m_ObjectHideFlags: 0

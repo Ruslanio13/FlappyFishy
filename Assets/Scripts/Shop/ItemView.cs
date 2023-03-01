@@ -10,6 +10,8 @@ public class ItemView : MonoBehaviour
     [SerializeField] private Button buyButton;
     [SerializeField] private Button selectButton;
     [SerializeField] private TMP_Text selectButtonText;
+    [SerializeField] private TMP_Text selectText;
+    [SerializeField] private TMP_Text selectedText;
     [SerializeField] private Image skin;
     [SerializeField] private TMP_Text priceText;
     private int _price;
@@ -61,8 +63,8 @@ public class ItemView : MonoBehaviour
     public void UpdateSelection()
     {
         if (PlayerPrefs.GetInt("Selected" + Item.Type) == id)
-            selectButtonText.text = "selected";
+            selectButtonText.text = selectedText.text;
         else
-            selectButtonText.text = "select";
+            selectButtonText.text = selectText.text;
     }
 }

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using YG;
 
 public class Score : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class Score : MonoBehaviour
         _score.text = score.ToString();
         scoreInt = score;
         if (score > PlayerPrefs.GetInt("best"))
+        {
             PlayerPrefs.SetInt("best", score);
+            YandexGame.NewLeaderboardScores("BestPlayers", score);
+        }
     }
 }
