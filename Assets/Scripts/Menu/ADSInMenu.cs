@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using YG;
 
 public class ADSInMenu : MonoBehaviour
@@ -17,6 +18,14 @@ public class ADSInMenu : MonoBehaviour
     public void Rewarded(int id)
     {
         if (id == adID)
-            Wallet.Instance.IncreaseBalance(rewardForAds);
+            StartCoroutine(DelayedReward());
+    }
+
+    private IEnumerator DelayedReward()
+    {
+        adsButton.interactable = false;
+        Wallet.Instance.IncreaseBalance(rewardForAds);
+        yield return new WaitForSeconds(3);
+        adsButton.interactable = true;
     }
 }
